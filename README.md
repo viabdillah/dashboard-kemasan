@@ -127,5 +127,4 @@ Aplikasi ini memiliki sistem otentikasi dan otorisasi berbasis peran (*role-base
 ## 👨‍💻 Dibuat Oleh
 
 * **Vi Abdillah**
-* GitHub: `[@user* **viabdillah**
-* GitHub: `[@username-anda](https://github.com/username-anda)`(https://github.com/username-anda)](https://github.com/viabdillah)`
+* GitHub: `@viabdillah(https://github.com/viabdillah)`
