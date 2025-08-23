@@ -1,61 +1,131 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+#  Dashboard Pusat Kemasan 📦
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Laravel](https://img.shields.io/badge/Laravel-12.x-FF2D20?style=for-the-badge&logo=laravel)
+![PHP](https://img.shields.io/badge/PHP-8.4-777BB4?style=for-the-badge&logo=php)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?style=for-the-badge&logo=tailwind-css)
 
-## About Laravel
+Sistem Manajemen Pesanan, Produksi, dan Inventori Terintegrasi yang dirancang untuk mengoptimalkan alur kerja bisnis percetakan dan kemasan.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Tampilan Aplikasi
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+https://github.com/user-attachments/assets/6e2d1a3c-5353-4811-96d5-a6e5b2259b36
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+*(Saran: Anda bisa merekam layar aplikasi Anda menggunakan aplikasi seperti **ScreenToGif** atau **LICEcap**, lalu unggah sebagai GIF ke repositori GitHub ini untuk membuat README lebih hidup)*
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🚀 Tentang Proyek Ini
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+**Dashboard Pusat Kemasan** adalah aplikasi web internal yang dibangun untuk mengelola seluruh siklus bisnis, mulai dari pencatatan pesanan oleh kasir, proses desain oleh desainer, manajemen produksi oleh operator, hingga pemantauan laporan oleh manajer. Aplikasi ini dirancang dengan antarmuka yang bersih, responsif, dan interaktif untuk memastikan kemudahan penggunaan bagi setiap role.
 
-### Premium Partners
+## ✨ Fitur Utama
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Aplikasi ini memiliki sistem otentikasi dan otorisasi berbasis peran (*role-based*). Setiap peran memiliki akses dan tugas yang spesifik:
 
-## Contributing
+### 👤 **Admin**
+- **Manajemen User:** Kemampuan penuh (CRUD - Create, Read, Update, Delete) untuk mengelola semua akun pengguna dan peran mereka.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 💰 **Kasir**
+- **Manajemen Pesanan:** Form input pesanan yang dinamis dan detail.
+- **Daftar Pesanan Aktif:** Melihat semua pesanan yang sedang dalam proses.
+- **Pembayaran & Invoice:** Proses pembayaran dengan pop-up invoice interaktif yang bisa dicetak.
+- **Riwayat Pesanan:** Melihat arsip semua pesanan yang telah selesai dan lunas.
+- **Buku Kas:** Mencatat semua transaksi uang masuk dan uang keluar secara manual. Pembayaran pesanan akan otomatis tercatat sebagai uang masuk.
 
-## Code of Conduct
+### 🎨 **Designer**
+- **Dashboard Tugas:** Halaman khusus yang menampilkan antrian pesanan, terbagi menjadi "Perlu Didesain" dan "Perlu Diverifikasi".
+- **Detail & Konfirmasi:** Melihat detail lengkap pesanan dan memberikan konfirmasi bahwa desain siap untuk dilanjutkan ke produksi.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### ⚙️ **Operator**
+- **Antrian Produksi:** Dashboard untuk melihat pesanan yang siap diproduksi dan yang sedang dalam proses produksi.
+- **Update Status Produksi:** Mengubah status pesanan dari "Siap Produksi" -> "Sedang Diproduksi" -> "Produksi Selesai".
+- **Manajemen Inventory:**
+  - Mengelola produk dengan varian (tipe, ukuran, dll).
+  - Form dinamis untuk menambah produk beserta variannya.
+  - Fitur *Stock Opname* interaktif dengan tombol `+` dan `-` melalui pop-up untuk menyesuaikan stok, lengkap dengan pencatatan riwayat perubahan stok.
+  - Mengelola stok spare part (fitur dasar sudah siap).
 
-## Security Vulnerabilities
+### 📊 **Manajer**
+- **Laporan Keuangan:** Dashboard interaktif dengan filter rentang waktu.
+- **Visualisasi Data:** Grafik garis dinamis yang menampilkan tren pemasukan vs. pengeluaran harian.
+- **Ringkasan Statistik:** Kartu statistik untuk total pemasukan, pengeluaran, dan laba/rugi bersih.
+- **Ekspor & Cetak:** Kemampuan untuk mengunduh laporan ke dalam format Excel dan mencetak laporan dengan tampilan yang rapi.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🛠️ Teknologi yang Digunakan
 
-## License
+- **Backend:** PHP 8.x, Laravel 12.x
+- **Frontend:** Blade, Tailwind CSS, Alpine.js
+- **Database:** MySQL
+- **Lainnya:** Chart.js, Laravel Excel
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## ⚙️ Panduan Instalasi & Setup Lokal
+
+1.  **Clone repositori ini:**
+    ```bash
+    git clone [https://github.com/USERNAME-ANDA/dashboard-kemasan.git](https://github.com/USERNAME-ANDA/dashboard-kemasan.git)
+    cd dashboard-kemasan
+    ```
+
+2.  **Install dependensi PHP (Composer):**
+    ```bash
+    composer install
+    ```
+
+3.  **Install dependensi JavaScript (NPM):**
+    ```bash
+    npm install
+    ```
+
+4.  **Konfigurasi Lingkungan:**
+    - Salin file `.env.example` menjadi `.env`.
+      ```bash
+      cp .env.example .env
+      ```
+    - Buat kunci aplikasi baru:
+      ```bash
+      php artisan key:generate
+      ```
+    - Atur koneksi database Anda di file `.env` (DB_DATABASE, DB_USERNAME, DB_PASSWORD).
+
+5.  **Setup Database:**
+    - Buat database baru di MySQL dengan nama yang Anda atur di `.env`.
+    - Jalankan migrasi dan seeder untuk membuat semua tabel dan data awal (termasuk roles):
+      ```bash
+      php artisan migrate:fresh --seed
+      ```
+
+6.  **Buat Storage Link:**
+    ```bash
+    php artisan storage:link
+    ```
+
+7.  **Jalankan Aplikasi:**
+    - Buka dua terminal.
+    - Di terminal pertama, jalankan Vite untuk kompilasi aset:
+      ```bash
+      npm run dev
+      ```
+    - Di terminal kedua, jalankan server development Laravel:
+      ```bash
+      php artisan serve
+      ```
+
+8.  **Buat Akun Admin Pertama:**
+    - Buka aplikasi di browser (`http://127.0.0.1:8000`).
+    - Klik **Register** dan buat akun baru.
+    - Buka database Anda (misal: dengan phpMyAdmin), masuk ke tabel `role_user`, dan tambahkan baris baru untuk menghubungkan `user_id` Anda dengan `role_id` untuk "admin" (biasanya ID `1`).
+
+---
+
+## 👨‍💻 Dibuat Oleh
+
+* **Vi Abdillah**
+* GitHub: `[@user* **viabdillah**
+* GitHub: `[@username-anda](https://github.com/username-anda)`(https://github.com/username-anda)](https://github.com/viabdillah)`
