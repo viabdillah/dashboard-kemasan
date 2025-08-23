@@ -1,0 +1,49 @@
+[x-cloak] { display: none !important; }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media print {
+    /* Sembunyikan semua elemen di body terlebih dahulu */
+    body * {
+        visibility: hidden;
+    }
+
+    /* Tampilkan HANYA konten invoice dan semua elemen di dalamnya */
+    .invoice-content, .invoice-content * {
+        visibility: visible;
+    }
+
+    /* Posisikan invoice ke pojok kiri atas halaman cetak agar pas */
+    .invoice-content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
+@media print {
+    /* Sembunyikan semua elemen di halaman secara default saat mode cetak aktif */
+    body * {
+        visibility: hidden;
+    }
+
+    /* Tampilkan HANYA area yang kita tandai sebagai .printable-area dan semua elemen di dalamnya */
+    .printable-area, .printable-area * {
+        visibility: visible;
+    }
+
+    /* Atur posisi area cetak agar mengisi seluruh halaman kertas */
+    .printable-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 0; /* Hapus padding tambahan saat mencetak */
+    }
+    .print-hidden {
+        display: none !important;
+    }
+}
