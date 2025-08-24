@@ -6,7 +6,7 @@
 
     <a href="{{ route('dashboard') }}" class="flex items-center px-2 text-gray-800 dark:text-white">
         <x-application-logo class="block h-9 w-auto fill-current" />
-        <span class="ml-3 text-xl font-bold">Dashboard Pusat Kemasan</span>
+        <span class="ml-3 text-xl font-bold">{{ config('app.name') }}</span>
     </a>
 
     <div class="flex flex-col justify-between flex-1 mt-10">

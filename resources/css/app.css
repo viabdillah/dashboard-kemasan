@@ -47,3 +47,13 @@
         display: none !important;
     }
 }
+
+/* Style untuk Parallax Background */
+.parallax-bg {
+  /* Ganti dengan URL gambar latar belakang Anda yang polanya tidak terlalu ramai */
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: auto;
+}
